@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+
+    <body>
+     <form name="myForm" onsubmit="validateForm(event)">
+        Name:<input type="text" nane="fname">
+        <input type="submit" value="submit">
+        <p id="message"></p>
+     </form>
+     
+        <script>
+            function validateForm(event) {
+                //Prevent the default form submission behaviour
+                event.preventDefault();
+
+                var name=document.forms ["myForm"]["[fname"].
+                value;
+
+                if  ( name === "") {
+                    alert("Name must be filled out");
+                    return false;
+
+                } 
+                else {
+                    //Display the success message in the "message" paragraph
+                    document.getElementById("message").innerHTML="Name submitted:" +name;
+                }
+            }
+        </script>
+    </body>
+</html>
